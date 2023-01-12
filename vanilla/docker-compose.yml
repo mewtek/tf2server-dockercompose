@@ -1,0 +1,18 @@
+version: "3.3"
+
+services:
+  tf2:
+    image: cm2network/tf2:latest
+    container_name: "tf2"
+    network_mode: "host"
+
+    volumes:
+      - ./tf2-data:/home/steam/tf-dedicated
+    
+    environment:
+      SRCDS_TOKEN: "CHANGEME"
+      SRCDS_WORKSHOP_AUTHKEY: "CHANGEME"
+      SRCDS_RCONPW: "CHANGEME"
+      SRCDS_PORT: 27015
+      SRCDS_MAXPLAYERS: 18
+      SRCDS_HOSTNAME: "Vanilla TF2 Server"
